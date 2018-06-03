@@ -97,6 +97,23 @@ form textarea{
 	min-height: 150px;
 }
 
+.alert {
+	padding: 1em;
+	color: #fff;
+	border-radius: 2px;
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+
+.alert.error {
+	background: #f2dede;
+	border: 1px solid #a94442;
+	color: #a94442;
+}
+
+.alert.success {
+	background: #4caf50;
+}
 
 form input[type="submit"]{
 	padding: 10px;
