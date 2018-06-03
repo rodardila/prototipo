@@ -3,6 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<title>Formulario Usuario</title>
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/registro.estilo.css">
 </head>
 <body>
 	<img src="html/pto.png" class="logo">
@@ -22,6 +25,18 @@
 			<input type="radio" name="sexo" value="hombre" placeholder="hombre"> hombre
 			<input type="radio" name="sexo" value="mujer" placeholder="mujer"> mujer
 			<br>
+
+			<?php if (!empty($errores)): ?>
+				<div class="alert error">
+					<?php echo $errores; ?>
+				</div>
+			<?php elseif($success): ?>
+				<div class="alert success">
+					<p>
+					<?php echo $success; ?>
+					</p>
+				</div>
+			<?php endif ?>
 
 			<input type="submit" name="enviar" value="Registrarse" class="btn btn-primary">
 			<br>

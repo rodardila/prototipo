@@ -3,6 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<title>Certificado Uso de Suelo</title>
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/principal.estilo.css">
 </head>
 <body>
 	<img src="html/pto.png" class="logo">
@@ -37,6 +40,18 @@
 			<input type="submit" name="solicitud" value="Solicitar" class="btn btn-primary">
 			<br>
 			<br>
+
+			<?php if (!empty($errores)): ?>
+				<div class="alert error">
+					<?php echo $errores; ?>
+				</div>
+			<?php elseif($success): ?>
+				<div class="alert success">
+					<p>
+					<?php echo $success; ?>
+					</p>
+				</div>
+			<?php endif ?>
 			<br>
 		</form>
 		
